@@ -17,6 +17,8 @@ import android.os.Process;
 import android.os.RemoteException;
 import android.util.Log;
 import android.view.WindowManager;
+import com.google.android.LCLog;
+
 import java.io.PrintWriter;
 
 /* loaded from: launcher_client.jar:com/google/android/libraries/gsa/launcherclient/LauncherClient.class */
@@ -37,6 +39,7 @@ public class LauncherClient {
     public ClientOptions n;
     public WindowManager.LayoutParams o;
     public i p;
+    public static final String TAG = LauncherClient.class.getSimpleName();
 
     /* loaded from: launcher_client.jar:com/google/android/libraries/gsa/launcherclient/LauncherClient$ClientOptions.class */
     public static class ClientOptions {
@@ -481,6 +484,7 @@ public class LauncherClient {
 
     /* JADX DEBUG: Don't trust debug lines info. Lines numbers was adjusted: min line is 1 */
     static Intent b(Context context, String str) {
+        LCLog.debug(String.format("LauncherClient Intent b context: %s, str: %s", context, str));
         String packageName = context.getPackageName();
         int iMyUid = Process.myUid();
         StringBuilder sb = new StringBuilder(String.valueOf(packageName).length() + 18);

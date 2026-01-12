@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Looper;
 import android.os.RemoteException;
+import com.google.android.LCLog;
 import com.google.android.libraries.gsa.launcherclient.AbsServiceStatusChecker;
 
 /* loaded from: launcher_client.jar:com/google/android/libraries/gsa/launcherclient/OverlayContentChecker.class */
@@ -19,6 +20,7 @@ public class OverlayContentChecker extends AbsServiceStatusChecker {
     public void checkOverlayContent(AbsServiceStatusChecker.StatusCallback statusCallback) {
         Intent intentB = LauncherClient.b(this.a, "com.google.android.googlequicksearchbox");
         intentB.setPackage("com.google.android.googlequicksearchbox");
+        LCLog.debug(String.format("OverlayContentChecker checkOverlayContent intentB: %s, ", intentB));
         if (this.a.bindService(intentB, new b(this, statusCallback), 1)) {
             return;
         }
