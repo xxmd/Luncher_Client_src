@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact name="launcher_client_15_202501_src:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/launcher_client_15_202501_src_jar</output-path>
+    <root id="root">
+      <element id="archive" name="launcher_client_15_202501_src.jar">
+        <element id="module-output" name="launcher_client_15_202501_src" />
+      </element>
+      <element id="library" level="project" name="android" />
+    </root>
+  </artifact>
+</component>
